@@ -33,7 +33,7 @@
         "_common": 
 		{
             "name": "Using a Java User-Defined Node which reads a User-Defined Policy",
-            "shortDescription": "Learn how to deploy user-defined nodes using a provided example which reads values from a user-defined policy (requires v11.0.0.5 or higher).",			
+            "shortDescription": "Learn how to deploy user-defined nodes using a provided example which reads values from a user-defined policy.",			
 			"durationText": "This tutorial takes approximately",
             "durationTime": "10 minutes",
             "_resourceToOpenComment": "The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
@@ -68,14 +68,14 @@
             "summary": 
 			{
                 "overviewName": "OVERVIEW",
-                "_overviewComment": "A short description of what happens in this tutorial, and an optional short explanation of the ACE concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
+                "_overviewComment": "A short description of what happens in this tutorial, and an optional short explanation of the concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
                 "sections": 
 				[
                     {
                         "section": "This tutorial demonstrates user-defined policies and Java user-defined nodes. The source code for the user-defined node (both the Eclipse plugin and the runtime plugin) is provided as well as a built PAR (plugin archive) file. The tutorial describes where to place the runtime package and how to reference it from an integration node owned server. The user-defined node's properties specify the name of a property of a user-defined policy, and the policy project in which it resides. An application is provided which contains a single message flow driven by an HTTP input. The next node in the flow is an instance of the user-defined node which reads the prescribed property from the user-defined policy and reports it back in an HTTP reply."
 					},
 					{
-                        "section": "The tutorial requires an ACE integration node owned server, which will be created and configured as part of the tutorial's instructions."
+                        "section": "The tutorial requires an integration node owned server, which will be created and configured as part of the tutorial's instructions."
                     },
                     {
                         "section": "In IBM App Connect Enterprise, an application is a container for all the resources that are required to create a solution."
@@ -162,7 +162,7 @@
                       				"details":"Create an integration node by starting an App Connect Enterprise command console and executing the following commands:<br><code><span class='cmdname'>mqsicreatebroker TESTNODE</span></code><br><code><span class='cmdname'>mqsistart TESTNODE</span></code><br><code><span class='cmdname'>mqsicreateexecutiongroup TESTNODE -e server</span></code>"
                     			},
 								{ 
-                      				"details":"Inside <span class='application'>PolicyQueryImpl</span> you will find the built node as a plugin archive named <span class='application'>PolicyQuery.par</span>. This file needs to be made available to the ACE runtime. Copy the file to a directory named <span class='application'>C:\\temp\\ExampleLilPath</span>. Next, open the runtime integration node's configuration file (node.conf.yaml) which you will find in the ACE workpath. By default this will be at location <span class='application'>C:\\ProgramData\\IBM\\MQSI\\components\\TESTNODE</span>.Edit the node.conf.yaml by uncommenting the line shown below, and specifying the directory where you just copied your par file:<br><code>lilPath: 'C:\\temp\\ExampleLilPath'                 # A list of paths from where User-defined node LIL/JAR files are loaded. (multiple directories are separated by platform path separator)</code><br>Restart the integration node."
+                      				"details":"Inside <span class='application'>PolicyQueryImpl</span> you will find the built node as a plugin archive named <span class='application'>PolicyQuery.par</span>. This file needs to be made available to the runtime. Copy the file to a directory named <span class='application'>C:\\temp\\ExampleLilPath</span>. Next, open the runtime integration node's configuration file (node.conf.yaml) which you will find in the IBM App Connect Enterprise workpath. By default this will be at location <span class='application'>C:\\ProgramData\\IBM\\MQSI\\components\\TESTNODE</span>.Edit the node.conf.yaml by uncommenting the line shown below, and specifying the directory where you just copied your par file:<br><code>lilPath: 'C:\\temp\\ExampleLilPath'                 # A list of paths from where User-defined node LIL/JAR files are loaded. (multiple directories are separated by platform path separator)</code><br>Restart the integration node."
 								},
 								{
 									"details":"Drag and drop deploy the provided BAR file named <span class='application'>AppUsingUDN.bar</span> which you will find inside the <span class='application'>ExampleAppUsingUDN</span> application."
