@@ -115,7 +115,7 @@
                             "section": "The User-Defined Node project <span class='application'>PolicyQuery</span> provides the files describing the toolkit part of the user-defined node. Its files provide the icons for the node and describe the names of its properties and terminals. The Java project <span class='application'>PolicyQueryImpl</span> contains code for the implementation of the runtime of the node. The code provides getters and setters for the node properties and the main evaluate method is found inside <span class='application'>PolicyQueryNode.java</span>. The other two projects provide an example message flow (in <span class='application'>ExampleUserDefinedPolicyProject</span>) and policy(in <span class='application'>ExampleUserDefinedPolicyProject</span>) which can be used to test the user-defined node implementation."
 						},
                         {
-			    			"section": "Once imported using the link on the right, the application named <span class='application'>ExampleAppUsingUDN</span> is ready to be deployed and tested. Before doing so, the instructions on the Prepare tab describe how to set up the runtime with the code for the user-defined node."
+			    			"section": "Before we test the application named <span class='application'>ExampleAppUsingUDN</span> the instructions in the Prepare section describe how to set up the runtime with the code for the user-defined node."
 						}
                     ]
                 },
